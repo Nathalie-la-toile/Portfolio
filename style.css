@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Pre:wght@400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+
+/*PROPRIETES GENERAL*/
+* {
+    margin: 0;
+    padding: 0; 
+    }
+  
+  a {
+      text-decoration: none; /*Enlève les surlignements des a*/
+      color: black; /*Mettre en noir tout les a de la page*/
+  }
+  
+  li {
+      list-style-type: none; /*Enlève les puces des li*/
+  }
+
+  .flex {
+    display: flex; /*Côte à côte*/
+    flex-wrap: wrap; /*Si ça rendre pas tout, retour à la ligne*/
+}
+
+.spaceBetween {
+    justify-content: space-between; /*Mettre des espaces*/
+}
+
+.alignCenter {
+    align-items: center;
+}
+
+.left {
+    margin-left: 300px;
+}
+
+/*HEADER*/
+   .headerPerso {   
+      position :fixed;   
+      border:4px solid black;
+   }
+
+   .headerPerso img {
+    width: 180px;
+    height: 190px;
+    object-fit: cover;
+    border-radius: 60px;
+    margin-left:40px;  
+    margin-top:25px;
+   }
+
+
+   .navHeader {  /*Mettre une dimension à la nav pour créer les espaces*/ 
+    width: 250px;
+    height: 350px;    
+    padding-top: 30px;
+    padding-left:20px;
+}
+
+  .navHeader a {
+    font-family: "Edu AU VIC WA NT Pre", cursive;
+    font-size: 35px;
+    font-weight: 500;     
+   }
+
+   /*SECTION MOI TITRE H1 ET H2*/
+   .moi h1 {
+    font-family: "Edu AU VIC WA NT Pre", cursive;
+    font-size: 55px;
+    font-weight: 700;    
+    margin-left:550px;
+   }
+
+   .moi h2 {
+    font-family: "Inter", serif;
+    font-size: 35px;
+    font-weight: 500;   
+    margin-left:600px; 
+   }
+
