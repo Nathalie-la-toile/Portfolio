@@ -1,0 +1,288 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
+/***********************************************PROPRIETES GENERAL**************************************************/
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Quicksand", serif;
+    box-sizing: border-box; 
+   }
+  
+ a {
+    text-decoration: none;
+    /*Enlève les surlignements des a*/
+    color: black;
+}
+
+li {
+    list-style-type: none;
+    /*Enlève les puces des li*/
+}
+
+.flex {
+    display: flex;
+    /*Côte à côte*/
+    flex-wrap: wrap;
+    /*Si ça rendre pas tout, retour à la ligne*/
+}
+
+.gap {
+    gap: 50px;
+}
+
+.spaceBetween {
+    justify-content: space-between;   
+}
+
+.alignCenter {
+    align-items: center;
+}
+
+.bold {
+    font-weight: 600;
+}
+
+.width30 {
+    width: 30%;
+}
+
+.width40 {
+    width: 40%;
+}
+
+.width60 {
+    width: 60%;
+}
+.marginLeft {
+    margin-left: 30px;
+}
+
+.container {
+    max-width: 1000px;
+    /*Ds container tjs mettre ls propriétés max width et with*/
+    width: 100%;
+    margin: auto;
+    /*c'est égal à margin-right et margin-left=auto*/
+    display: flex;
+}
+
+.bgGreen {
+    background-color: #AEEA94;
+}  
+
+
+/************************************************************HEADER************************************************/
+.header {
+    /*Mettre une dimension à la nav pour créer les espaces*/
+    width: 70%;
+    height: 70px;
+    margin-left: auto;
+    margin-right: auto;    
+}
+
+.monHeader {
+    padding: 16px 64px;
+    margin-bottom: 40px;
+    /*background-color: #AEEA94;*/
+    border: 4px solid #AEEA94;
+}
+
+.monHeader img {
+    width: 80px;
+    margin-left: 25px;
+    object-fit: cover;
+    border-radius: 90px;   
+}
+
+.monHeader a {
+    color: black;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.navHeader {
+    /*Mettre une dimension à la nav pour créer les espaces*/
+    width: 50%;
+}
+
+/*********************************************SECTION TITRE****************************************************/
+.titre {
+    padding:30px;  
+}
+
+h1 {
+    font-size:60px;
+    font-weight: 700;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 80px;  
+    color: #AEEA94;   
+}
+
+.sujet img {
+    width: 650px;
+    object-fit: cover;
+    filter: drop-shadow(0 0 0.75rem #AEEA94);
+    margin-left: 300px;
+    margin-top: 100px;
+}
+
+.sujet p {
+    font-size: 22px;
+    font-weight: 500;   
+ 
+}
+
+/*********************************************SECTION A PROPOS****************************************************/
+.me { 
+   padding:30px;
+}
+
+.APropos {
+    border: 5px solid #AEEA94;
+    border-radius: 10px;
+    margin-top: 100px;
+    padding: 40px;
+}
+
+.APropos h2 { 
+    font-size: 40px;
+    font-weight: 700;   
+    text-align: center;  
+    /*color: rgb(6, 114, 37);*/
+    color: #AEEA94;
+    text-shadow: 2px 2px;
+}
+
+.me video {
+    width: 35%;
+    height: fit-content;
+    object-fit: cover;
+    filter: drop-shadow(0 0 0.75rem rgb(18, 180, 29));
+}
+
+.APropos p {  
+    font-size: 20px;
+    font-weight: 600;   
+    line-height: 35px;
+}
+
+.APropos a {
+font-size: 25px;
+font-weight: 700;  
+margin-top:30px;
+color: #AEEA94;
+}
+
+/**********************************************SECTION COMPETENCES**************************************************/
+.competences {
+    margin-left: 20px;   
+    margin-top: 50px;    
+}
+
+.competences h2 {   
+    font-weight:600;   
+    font-size: 40px;     
+    margin-bottom: 40px;
+    color: black;
+    text-shadow: 2px 2px;
+}
+
+/* Container qui contient les cartes */
+.flip-card-container {
+    display: flex;             /* Aligner les cartes horizontalement */
+    flex-wrap: wrap;           /* Permet aux cartes de passer à la ligne suivante si nécessaire */
+    justify-content: space-between; 
+    padding:40px;             
+}
+
+/* LES CARDS */
+.flip-card {
+    background-color: transparent;
+    width: 330px;
+    height: 230px;
+    border: 1px solid #f1f1f1;
+    perspective: 1000px; /* effet 3D */  
+}
+
+/* Container pour positionner la face avant et arrière */
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d; 
+}
+
+/* Pour effectuer un mouvement horizontal au passage de la souris */
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+/* Positionner l'avant et l'arrière */
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+}
+
+/* Styliser le recto si l'image est manquante */
+.flip-card-front {
+    background-color: #AEEA94;
+    color: black;
+    filter: drop-shadow(0 0 0.75rem black);
+}
+
+/* Mettre du style du côté arrière */
+.flip-card-back {
+    background-color: black;
+    color: #AEEA94;
+    transform: rotateY(180deg);
+    filter: drop-shadow(0 0 0.75rem #AEEA94);   
+}
+
+.flip-card-front h3 {   
+    font-weight:600;   
+    font-size: 25px;  
+    text-align: center;  
+    padding:50px;    
+}
+
+.flip-card-back li {
+    font-weight:500;   
+    font-size: 20px;
+    margin-top: 18px;
+    text-align: center; 
+}
+ 
+
+/**********************************************SECTION MES SITES**************************************************/
+.projets {
+    margin-left: 20px;   
+    margin-top: 50px;      
+}
+
+.projets  h2 {   
+    font-weight:600;   
+    font-size: 40px;     
+    margin-bottom: 40px;
+    color: black;
+    text-shadow: 2px 2px;
+}
+
+.site {
+ margin-top:20px;
+ border: 5px solid #AEEA94;
+}
+
+.site img {
+    height: 300px;
+    object-fit: cover;
+}
+
+
+
+
